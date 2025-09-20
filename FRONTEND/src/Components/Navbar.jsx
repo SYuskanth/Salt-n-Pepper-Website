@@ -1,9 +1,15 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import React from "react";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  
+  // Hide the navbar on admin pages
+  if (location.pathname === '/admin') {
+    return null;
+  }
 
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50 sm:px-4 md:px-6 lg:px-8 ">

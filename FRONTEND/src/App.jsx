@@ -14,6 +14,7 @@ import PrivacyPolicy from "./Pages/FOOTER Pages/Privacy Policy";
 import NewsRoom from "./Pages/More Pages/News Room";
 import FAQ from "./Pages/More Pages/FAQ";
 import FloatingAppWidget from "./Components/FloatingAppWidget";
+import Admin from "../../ADMIN/Admin";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/newsroom" element={<NewsRoom />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/admin" element={<Admin />} />
         {/* Add other routes as needed */}
       </Routes>
     </BrowserRouter>

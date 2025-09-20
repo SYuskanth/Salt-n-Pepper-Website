@@ -1,10 +1,18 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   CourseLinkImage,
   AppStoreImage,
 } from '../assets/assests';
 
 const FloatingAppWidget = () => {
+  const location = useLocation();
+  
+  // Hide the floating widget on admin pages
+  if (location.pathname === '/admin') {
+    return null;
+  }
+
   return (
     <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-3">
       {/* Udemy Course Link */}
